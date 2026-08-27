@@ -1,0 +1,2 @@
+# ChatGbt
+Exercício com ChatGbt
