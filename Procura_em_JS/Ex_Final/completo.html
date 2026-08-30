@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Final</title>
+</head>
+<body>
+    
+    <h1 id="titulo">Meu site</h1>
+
+    <p class="texto">Estou aprendendo HTML.</p>
+    <p class="texto">Estou aprendendo CSS.</p>
+
+    <h2>JavaScript</h2>
+
+    <p>Estou estudondo DOM.</p>
+    <p>Quero aprender programação.</p>
+
+    <script>
+        let titulo = window.document.getElementById('titulo')
+        titulo.textContent = 'Meu primerio projeto DOM'
+
+        let paragrafo = window.document.getElementsByClassName('texto')
+        paragrafo[0].textContent = 'HTML é a estrutura da página.'
+
+        let p = window.document.getElementsByTagName('p')
+        p[2].textContent = 'Estou ficando bom em DOM'
+
+
+        window.document.querySelector('h2').style.color = 'blue'
+
+        window.document.querySelectorAll('.texto')[1].style.color = 'green'
+
+    </script>
+
+</body>
+</html>

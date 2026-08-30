@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>queryselector</title>
+</head>
+<body>
+    <h1>Inicando estudos querySelector()</h1>
+    <p>Olá, está pronto?</p>
+    <p id="segundo">Vamos-lá!</p>
+    <h1>Oque acha do JavaScript?</h1>
+    <h2>Professor Guanabara</h2>
+
+    <script>
+        let primeiro_paragrafo = window.document.querySelector('p')
+        window.document.write(primeiro_paragrafo.innerHTML)
+        
+        let segundo_paragrafo = window.document.querySelector('#segundo')
+        window.document.write(segundo_paragrafo.innerHTML)
+    </script>
+
+</body>
+</html>

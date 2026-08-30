@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementsByTagName</title>
+</head>
+<body>
+    <p>JavaScript</p>
+    <h1>Iniciando getElementsByTagName()</h1>
+    <p>Olá</p>
+    <p>Vamos-lá</p>
+    <h2>Oque achou?</h2>
+
+    <script>
+        let textos = window.document.getElementsByTagName('p')
+        textos[2].style.color = 'red'
+        window.document.write(textos[1].innerHTML)
+        textos[0].textContent = 'Hello'
+    </script>
+
+</body>
+</html>
