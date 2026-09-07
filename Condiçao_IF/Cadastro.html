@@ -4,16 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
+
+    <style>
+        #cad {
+            background-color: aquamarine;
+            width: 450px;
+            height: 300px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 27px;
+            font-weight: bold;
+            color: blue;
+            padding: 5px;
+        }
+
+        fieldset {
+            height: 70%;
+        }
+
+         input {
+            width: 250px;
+            height: 30px;
+            padding: 0;
+         }
+
+         label {
+            font-size: 15px;
+         }
+    </style>
+
 </head>
 <body>
-    <h1>Cadastro</h1>
-    <table>
-        <thead>
-            <th>
-                <td>Idade</td>
-                <td>Valor</td>
-            </th>
-        </thead>
-    </table>
+    <div id="cad">
+        Cadastro
+
+        <fieldset>
+            <label>
+                Nome:
+            <input type="text" name="nome" id="nome">
+            </label>
+            <input type="number" name="idade" id="idade">
+            <input type="button" value="salvar">
+        </fieldset>
+
+    </div>
 </body>
 </html>
