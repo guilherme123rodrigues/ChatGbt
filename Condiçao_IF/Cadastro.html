@@ -9,7 +9,7 @@
         #cad {
             background-color: aquamarine;
             width: 450px;
-            height: 300px;
+            height: 130px;
             text-align: center;
             font-family: Arial, Helvetica, sans-serif;
             font-size: 27px;
@@ -22,31 +22,112 @@
             height: 70%;
         }
 
-         input {
+         #nome {
             width: 250px;
             height: 30px;
             padding: 0;
          }
 
+         #idade {
+            width: 40px;
+            height: 30px;
+            padding: 0;
+            text-align: center;
+         } 
+
          label {
             font-size: 15px;
+            color: black;
+         }
+
+         #reg {
+            margin-top: 5px;
+            margin-bottom: 5px;
+            background-color: aquamarine;
+            width: 450px;
+            height: 160px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 27px;
+            font-weight: bold;
+            color: blue;
+            padding: 5px;
+         }
+
+         p {
+            font-size: 17px;
+            color: black;
+            text-align: left;
+            margin-top: 0;
+         }
+
+         #slv input {
+            width: 100px;
+            height: 30px;
+         }
+
+         #slv #limpar:hover {
+            font-size: 18px;
+            color: blue;
+         }
+
+         #slv #salvar:hover {
+            font-size: 18px;
+            color: blue;
          }
     </style>
 
 </head>
 <body>
     <div id="cad">
-        Cadastro
-
         <fieldset>
+            <legend>Cadastro</legend>
             <label>
                 Nome:
             <input type="text" name="nome" id="nome">
             </label>
-            <input type="number" name="idade" id="idade">
-            <input type="button" value="salvar">
-        </fieldset>
 
+            <label>
+                Idade:
+                <input type="number" name="idade" id="idade">
+            </label>
+        </fieldset>
     </div>
+
+    <div id="reg">
+        <fieldset>
+            <legend>Registro</legend>
+            <p class="p">Nome:</p>
+            <p class="p">Idade:</p>
+            <p class="p">Situação: </p>
+        </fieldset>
+    </div>
+
+    <div id="slv">
+        <input type="button" value="salvar" id="salvar" class="botão">
+        <input type="button" value="limpar" id="limpar" class="botão">
+    </div>
+
+    <script>
+        let botao = window.document.querySelectorAll('.botão')
+        let nome = window.document.querySelector('#nome')
+        let idade = window.document.querySelector('#idade')
+        let registro = window.document.querySelectorAll('.p')    
+
+        botao[0].addEventListener('click', () => {
+            registro[0].textContent = `Nome: ${nome.value}`
+            registro[1].textContent = `Idade: ${idade.value}`
+            registro[2].textContent = `Situação: ${Number(idade.value) >= 18?'Aprovado':'Reprovado'}`
+        });
+
+        botao[1].addEventListener('click', () => {
+            registro[0].textContent = `Nome:`
+            registro[1].textContent = `Idade:`
+            registro[2].textContent = `Situação:`
+        }
+    )
+
+    </script>
+
 </body>
 </html>
