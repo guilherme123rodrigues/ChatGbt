@@ -9,13 +9,17 @@
         #cad {
             background-color: aquamarine;
             width: 450px;
-            height: 130px;
+            height: 500px;
             text-align: center;
             font-family: Arial, Helvetica, sans-serif;
             font-size: 27px;
             font-weight: bold;
             color: blue;
             padding: 5px;
+        }
+
+        #cadastro #nome {
+            margin-bottom: 20px;
         }
 
         fieldset {
@@ -26,6 +30,7 @@
             width: 250px;
             height: 30px;
             padding: 0;
+            margin-top: 0;
          }
 
          #idade {
@@ -40,38 +45,38 @@
             color: black;
          }
 
-         #reg {
-            margin-top: 5px;
-            margin-bottom: 5px;
-            background-color: aquamarine;
-            width: 450px;
-            height: 160px;
-            text-align: center;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 27px;
-            font-weight: bold;
-            color: blue;
-            padding: 5px;
-         }
+        #reg {
+            position: relative;
+            margin-bottom: 30px;
+        }      
 
-         p {
+         .p {
             font-size: 17px;
             color: black;
             text-align: left;
             margin-top: 0;
          }
 
-         #slv input {
+         #situação {
+            position: absolute;
+            width: 77%;
+            height: 100px;
+            font-size: 15px;
+            color: black;
+         }
+
+         input {
+            margin-top: 20px;
             width: 100px;
             height: 30px;
          }
 
-         #slv #limpar:hover {
+         #limpar:hover {
             font-size: 18px;
             color: blue;
          }
 
-         #slv #salvar:hover {
+         #salvar:hover {
             font-size: 18px;
             color: blue;
          }
@@ -79,8 +84,9 @@
 
 </head>
 <body>
+    <fieldset>
     <div id="cad">
-        <fieldset>
+        <fieldset id="cadastro">
             <legend>Cadastro</legend>
             <label>
                 Nome:
@@ -89,35 +95,35 @@
 
             <label>
                 Idade:
-                <input type="number" name="idade" id="idade" required>
+                <input type="number" name="idade" id="idade" required placeholder="0">
             </label>
-        </fieldset>
-    </div>
 
-    <div id="reg">
-        <fieldset>
-            <legend>Registro</legend>
-            <p class="p">Nome:</p>
-            <p class="p">Idade:</p>
-            <p class="p">Situação: </p>
-        </fieldset>
-    </div>
+            <fieldset id="reg">
+                <legend>Registro</legend>
+                <p class="p">Nome:</p>
+                <p class="p">Idade:</p>
+                <fieldset id="situação">
+                    <legend class="p">Situação:</legend>
+                </fieldset>
+            </fieldset>
 
-    <div id="slv">
-        <input type="button" value="salvar" id="salvar" class="botão">
-        <input type="button" value="limpar" id="limpar" class="botão">
+            <input type="button" value="salvar" id="salvar" class="botão">
+            <input type="button" value="limpar" id="limpar" class="botão">
+        </fieldset>
     </div>
 
     <script>
         let botao = window.document.querySelectorAll('.botão')
         let nome = window.document.querySelector('#nome')
         let idade = window.document.querySelector('#idade')
-        let registro = window.document.querySelectorAll('.p')    
+        let registro = window.document.querySelectorAll('.p')
+        let situacao = window.document.getElementById('situação')
 
         botao[0].addEventListener('click', () => {
             registro[0].textContent = `Nome: ${nome.value}`
             registro[1].textContent = `Idade: ${idade.value}`
-            registro[2].textContent = `Situação: ${Number(idade.value) >= 18?'Aprovado':'Reprovado'}`
+            situacao.textContent = Number(idade.value >= 18)?'Pela norma relativa da administração do deparrtamento da instituição pública, no Art. 2034, você está apto para aprovação.':'Pela norma relativa da administração do deparrtamento da instituição pública, no Art. 2034, você não está apto para aprovação.'
+            
         });
 
         botao[1].addEventListener('click', () => {
@@ -125,7 +131,7 @@
             idade.value = ''
             registro[0].textContent = `Nome:`
             registro[1].textContent = `Idade:`
-            registro[2].textContent = `Situação:`
+            situacao.textContent= ``
         }
     )
 
