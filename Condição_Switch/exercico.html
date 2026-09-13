@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia da semana</title>
+
+    <style>
+
+        body {
+            font-size: 20px;
+        }
+
+        div {
+            margin: 35%
+        }
+    </style>
+
+</head>
+<body>
+
+    <div>
+        <label>
+            Digite um  valor de 1 a 7: <input style="width: 40px; text-align: center" type="text" name="numero" id="numero" required>
+        </label>
+
+        <input type="button" value="ok" id="ok">
+
+        <fieldset style="width: 200px">
+            <legend  style="text-align: center;">Dia da semana</legend>
+            <p id="final_de_semana" style="text-align: center; font-size: 13px; color: white">''</p>
+            <p id="semana" style="font-size: 23px; color: white; text-align: center; margin-top: 0">''</p>
+        </fieldset>
+    </div>
+
+    <script>
+        let ok = window.document.querySelector('#ok')
+        let numero = window.document.querySelector('#numero')
+        let final_de_semana = window.document.querySelector('#final_de_semana')
+        let semana = window.document.querySelector('#semana')
+        let Sab_Dom = ''
+        let dia = ''
+
+        ok.addEventListener('click', () => {
+
+            switch (numero.value) {
+            case '1':
+                dia = 'Domingo'
+                break
+            case '2':
+                dia = 'Segunda-feira'
+                break
+            case '3':
+                dia = 'Terça-feira'
+                break
+            case '4':
+                dia = 'Quarta-feira'
+                break
+            case '5':
+                dia = 'Quinta-feira'
+                break
+            case '6':
+                dia = 'Sexta-feira'
+                break
+            case '7':
+                dia = 'Sábado'
+                break
+            default:
+                if (numero.value === '') {
+                    dia = 'Digite um valor'
+                } else
+                    dia = 'Valor ínvalido!'
+                break
+        }
+            if (dia === 'Sábado' || dia === 'Domingo') {
+                Sab_Dom = '(final de semana)'
+            }
+
+            final_de_semana.innerHTML = `<b style="color: black">${Sab_Dom}</b>`
+            semana.innerHTML = `<b style="color: black">${dia}</b>`
+        })
+    </script>
+
+</body>
+</html>
