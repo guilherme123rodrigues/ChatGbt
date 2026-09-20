@@ -1,0 +1,28 @@
+body {
+    margin: auto;
+}
+
+header {
+    text-align: center;
+    background-color: antiquewhite;
+}
+
+h1 {
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+fieldset {
+    width: 600px;
+    height: 300px;
+    margin: auto;
+}
+
+p {
+    text-align: center;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    background-color: blanchedalmond;
+    font-weight: bold;
+    font-style: italic;
+}
