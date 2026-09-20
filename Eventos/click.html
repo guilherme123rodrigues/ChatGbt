@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"Evento ~click"</title>
+
+    <style>
+        body {
+            background-color:  goldenrod;
+        }
+
+        header {
+            text-align: center;
+            margin-top: 20%;
+        }
+
+        div {
+            text-align: center;
+        }
+
+        label {
+            color: blue;
+            font-weight: bold;
+        }
+
+        #botao {
+            box-shadow: 5px 5px 5px;
+            border-radius: 4px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 15px;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1>Alterando a mesnsagem!</h1>
+    </header>
+
+    <div>
+        <main>
+            <h3>Mensagem original</h3>
+
+            <label for="botao">Clique aqui:</label>
+            <input type="button" value="Mudar" id="botao">
+        </main>
+    </div>
+    <footer>&copy GuilhermeRodrigues</footer>
+
+    <script>
+        let msg = window.document.getElementsByTagName("h3")
+        let botao = window.document.querySelector("#botao")
+        botao.addEventListener('click', clicar)
+
+        function clicar() {
+            msg[0].innerHTML = '<b style="color: green">JavaScript é meu legal :)</b>'
+        }
+    </script>
+</body>
+</html>
