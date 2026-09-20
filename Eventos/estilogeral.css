@@ -1,0 +1,43 @@
+body {
+    background-color:  goldenrod;
+}
+
+header {
+    text-align: center;
+    margin-top: 20%;
+}
+
+div {
+    text-align: center;
+}
+
+label {
+    color: blue;
+    font-weight: bold;
+}
+
+#botao {
+    box-shadow: 5px 5px 5px;
+    border-radius: 4px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 15px;
+}
+
+#quadrado {
+    position: relative;
+    width: 250px;
+    height: 200px;
+    border-radius: 5px;
+    margin: auto;
+    background-color: antiquewhite;
+    color: black;
+}
+
+#passe {
+    position: absolute;
+    margin: 35% 29%;
+    font-weight: bold;
+}

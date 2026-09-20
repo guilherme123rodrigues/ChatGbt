@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"Evento ~click"</title>
+
+    <link rel="stylesheet" href="../estilogeral.css">
+
+</head>
+<body>
+    <header>
+        <h1>Alterando a mesnsagem!</h1>
+    </header>
+
+    <div>
+        <main>
+            <h3>0</h3>
+
+            <label for="botao">Clique aqui:</label>
+            <input type="button" value="Mudar" id="botao">
+        </main>
+    </div>
+    <footer>&copy GuilhermeRodrigues</footer>
+
+    <script>
+        let botao = window.document.querySelector("#botao")
+        botao.addEventListener("click", clicar)
+
+        function clicar() {
+            let altera_txt = window.document.getElementsByTagName("h3")
+            altera_txt[0].innerHTML = '<b style= "color: green">1</b>'
+        }
+    </script>
+</body>
+</html>

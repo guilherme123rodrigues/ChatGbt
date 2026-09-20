@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento ~mouseover~</title>
+
+    <link rel="stylesheet" href="../estilogeral.css">
+
+</head>
+<body>
+    <header>
+        <h1>Aguardando mouseover</h1>
+    </header>
+
+    <fieldset id="quadrado"><p id="passe">Passe por cima</p></fieldset>
+
+    <footer>&copy; GuilhermeRodrigues</footer>
+
+    <script>
+        let quadrado = window.document.querySelector("#quadrado")
+
+        quadrado.addEventListener("mouseover", passarMouse)
+
+        function passarMouse() {
+            quadrado.document.style.background = "black"
+        }
+    </script>
+
+</body>
+</html>
