@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento ~mouseup~</title>
+
+    <link rel="stylesheet" href="../../estilogeral.css">
+
+</head>
+<body>
+    <header>
+        <h1>Evento mouseover/mouseup</h1>
+    </header>    
+        
+    <main>
+        <div>
+            <fieldset id="quadrado">
+                <p id="passe"></p>
+            </fieldset>   
+        </div>
+    </main>
+    
+    <footer>&copy; GuilhermeRodrigues</footer>
+
+    <script>
+        let quadrado = window.document.querySelector('#quadrado')
+        let p = window.document.querySelector("#passe")
+
+        quadrado.addEventListener("mousedown", pressionar)
+        quadrado.addEventListener("mouseup", pressioneSolta)
+
+        function pressionar() {
+            quadrado.style.backgroundColor = 'red'
+            p.textContent = 'Mouse pressionado!'
+        }
+
+        function pressioneSolta() {
+            quadrado.style.backgroundColor = 'green'
+            p.textContent = 'Mouse não pressionado!'
+        }
+    </script>
+
+</body>
+</html>

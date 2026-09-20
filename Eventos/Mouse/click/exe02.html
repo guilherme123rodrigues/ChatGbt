@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>"Evento ~dblclick"</title>
+    <title>"Evento ~click"</title>
 
-    <link rel="stylesheet" href="../estilogeral.css">
+    <link rel="stylesheet" href="../../estilogeral.css">
 
 </head>
 <body>
@@ -15,21 +15,21 @@
 
     <div>
         <main>
-            <h3>Mensagem original</h3>
+            <h3>0</h3>
 
-            <label for="botao">Clique aqui 2x:</label>
+            <label for="botao">Clique aqui:</label>
             <input type="button" value="Mudar" id="botao">
         </main>
     </div>
     <footer>&copy GuilhermeRodrigues</footer>
 
     <script>
-        let msg = window.document.getElementsByTagName("h3")
         let botao = window.document.querySelector("#botao")
-        botao.addEventListener('dblclick', clicar)
+        botao.addEventListener("click", clicar)
 
         function clicar() {
-            msg[0].innerHTML = '<b style="color: green">Você deu dois cliques!</b>'
+            let altera_txt = window.document.getElementsByTagName("h3")
+            altera_txt[0].innerHTML = '<b style= "color: green">1</b>'
         }
     </script>
 </body>

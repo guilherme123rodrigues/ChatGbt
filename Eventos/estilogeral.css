@@ -37,7 +37,8 @@ footer {
 }
 
 #passe {
-    position: absolute;
-    margin: 35% 29%;
     font-weight: bold;
+    text-align: center;
+    margin-top: 39%;
+    color: white;
 }

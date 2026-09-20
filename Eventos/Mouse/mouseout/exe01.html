@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento ~mouseout~</title>
+
+    <link rel="stylesheet" href="../../estilogeral.css">
+
+</head>
+<body>
+    <header>
+        <h1>Aguardando os Eventos do mouse</h1>
+    </header>
+
+    <fieldset id="quadrado"><p id="passe"></p></fieldset>
+
+    <footer>&copy; GuilhermeRodrigues</footer>
+
+    <script>
+        let quadrado = window.document.querySelector("#quadrado")
+        let p = window.document.querySelector("#passe")
+        
+        quadrado.addEventListener("mouseover", passarMouse)
+        quadrado.addEventListener("mouseout", sairMouse)
+        quadrado.addEventListener("click", clicar)
+
+        function passarMouse() {
+            quadrado.style.backgroundColor = 'red'
+            p.textContent = 'Entrou!'
+        }
+
+        function sairMouse() {
+            quadrado.style.backgroundColor = 'blue'
+            p.textContent = 'Saiu!'
+        }
+
+        function clicar() {
+            quadrado.style.backgroundColor = 'black'
+            p.textContent = 'Clicou!'
+        }
+    </script>
+
+</body>
+</html>

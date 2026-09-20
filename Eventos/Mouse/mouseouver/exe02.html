@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evento ~mouseover~</title>
 
-    <link rel="stylesheet" href="../estilogeral.css">
+    <link rel="stylesheet" href="../../estilogeral.css">
 
 </head>
 <body>
@@ -19,11 +19,11 @@
 
     <script>
         let quadrado = window.document.querySelector("#quadrado")
-
+        
         quadrado.addEventListener("mouseover", passarMouse)
 
         function passarMouse() {
-            quadrado.document.style.background = "black"
+            quadrado.style.backgroundColor = 'red'
         }
     </script>
 
