@@ -10,15 +10,35 @@
 </head>
 <body>
     <header>
-        <h1>Cadastro de usuáro</h1>
+        <h1>Cadastro de usuário</h1>
     </header>
 
     <main>
-        <fieldset></fieldset>
+        <fieldset>
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome">
+
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="email">
+
+            <label for="DataNascimento">Data de nascimento</label>
+            <input type="date" name="data de nascimento" id="DataNascimento">
+
+            <label for="telefone">Telefone</label>
+            <input type="tel" name="telefone" id="telefone">
+
+            <input type="button" value="Registrar" id="botao">
+
+        </fieldset>
+
+        <fieldset id="registro">
+            <p class="registro">Data:</p>
+            <p class="registro">Hora:</p>
+        </fieldset>
     </main>
 
     <footer>
-        <p>&copy; GuilhermeRodrigues</p>            
+        <p id="footer">&copy; GuilhermeRodrigues</p>            
     </footer>
 </body>
 </html>

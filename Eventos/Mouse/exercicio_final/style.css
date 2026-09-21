@@ -13,12 +13,44 @@ h1 {
 }
 
 fieldset {
-    width: 600px;
-    height: 300px;
+    width: 640px;
+    height: 100px;
     margin: auto;
 }
 
-p {
+input {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+    margin: 12px 12px 12px 0;
+}
+
+label {
+    margin: 15px 0;
+    font-weight:  bold;
+}
+
+#nome {
+    width: 300px;
+}
+
+#telefone {
+    width: 130px;
+}
+
+#botao {
+    background-color: rgba(0, 0, 255, 0.384);
+    text-align: center;
+    font-weight: bold;
+    width: 100px;
+    height: 32px;
+}
+
+#registro {
+    width: 15%;
+    margin-left: 25.55%;
+}
+
+#footer {
     text-align: center;
     padding-top: 3%;
     padding-bottom: 3%;
