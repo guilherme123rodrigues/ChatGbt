@@ -40,5 +40,20 @@
     <footer>
         <p id="footer">&copy; GuilhermeRodrigues</p>            
     </footer>
+
+    <script>
+        let botao = window.document.querySelector('#botao')
+
+        botao.addEventListener('click', () => {
+                let registro = window.document.querySelectorAll('.registro')
+                let data_hora = new Date()
+
+                registro[0].textContent = `Data: ${data_hora.getDate()}/${data_hora.getMonth()}/${data_hora.getFullYear()}`
+
+                registro[1].textContent = `Hora: ${data_hora.getHours()}:${data_hora.getMinutes()}`
+            }
+        )
+    </script>
+
 </body>
 </html>
