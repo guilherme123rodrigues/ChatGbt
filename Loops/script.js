@@ -7,7 +7,7 @@ function gerar() {
                 let tabuada = window.document.getElementById('tabuada')
                 let cont = 0
                 while (cont <= 10) {
-                    tabuada.innerHTML += `${valor.value} x ${cont} = ${valor.value*cont}<br>`
+                    tabuada.innerHTML += `${valor.value} x ${cont} = ${valor.value*cont} <br>`
                     cont++
                 }
 
