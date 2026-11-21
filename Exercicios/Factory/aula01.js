@@ -17,7 +17,8 @@ class Carro {
     };
 
     apresentar() {
-        console.log(`Marca: ${this.marca} Modelo: ${this.modelo}`)
+        console.log(`Marca: ${this.marca}`)
+        console.log(`Modelo: ${this.modelo}`)
     }
 };
 
@@ -33,4 +34,4 @@ class Moto {
 };
 
 let veiculo = Criar.solicitar('Carro', { marca: 'Honda', modelo: 'Fit' })
-console.log(veiculo.apresentar())
+veiculo.apresentar()
