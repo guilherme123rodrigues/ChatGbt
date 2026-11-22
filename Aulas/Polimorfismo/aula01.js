@@ -37,3 +37,6 @@ let passaro = new Passaro()
 dog.emitirSom()
 cat.emitirSom()
 passaro.emitirSom()
+
+
+// Polimorfismo permite que classes diferentes tenhha o métodos com o mesmo nome, mas com saidas diferentes
