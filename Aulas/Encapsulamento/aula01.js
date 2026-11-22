@@ -1,5 +1,5 @@
 class Usuario {
-    // Cria a idade privada, podedendo ser acessada/modificada apenas na classe, nõa pode ser acessada/modificada externamente
+    // Cria a idade privada, podendo ser acessada/modificada apenas na classe, nõa pode ser acessada/modificada externamente
     #idade;
     constructor(nome, idade) {
         this.nome = nome;

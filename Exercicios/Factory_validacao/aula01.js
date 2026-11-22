@@ -6,7 +6,10 @@ class CriarFactory {
 
 class CriarUsuario{
     constructor(nome, idade) {
+        // Validamos os parâmetros
         if(nome === '') {
+            // 'throw' Cria uma exceção
+            // 'new Error' Cria um objeto do tipo Error
             throw new Error('Nome inválido!')
         } else if (idade <= 0) {
             throw new Error('Idade inválida!')
